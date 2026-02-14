@@ -1,0 +1,9 @@
+error TS2468: Cannot find global value 'Promise'.
+src/components/ScrollyVideo.tsx(3,80): error TS2307: Cannot find module 'framer-motion' or its corresponding type declarations.
+src/components/ScrollyVideo.tsx(32,24): error TS2705: An async function or method in ES5 requires the 'Promise' constructor.  Make sure you have a declaration for the 'Promise' constructor or include 'ES2015' in your '--lib' option.
+src/components/ScrollyVideo.tsx(37,29): error TS2585: 'Promise' only refers to a type, but is being used as a value here. Do you need to change your target library? Try changing the 'lib' compiler option to es2015 or later.
+src/components/ScrollyVideo.tsx(40,44): error TS2550: Property 'padStart' does not exist on type 'string'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2017' or later.
+src/components/ScrollyVideo.tsx(56,13): error TS2585: 'Promise' only refers to a type, but is being used as a value here. Do you need to change your target library? Try changing the 'lib' compiler option to es2015 or later.
+src/components/ScrollyVideo.tsx(140,5): error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+src/components/ScrollyVideo.tsx(141,7): error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
+src/components/ScrollyVideo.tsx(142,9): error TS17004: Cannot use JSX unless the '--jsx' flag is provided.
