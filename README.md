@@ -1,39 +1,32 @@
-# Fawaz V - Personal Portfolio
+# Mainak Das | Portfolio
 
-A premium, interactive personal portfolio website built with modern web technologies to showcase my projects, technical skills, and professional journey.
+A sleek, interactive 3D portfolio showcasing my projects and professional progression.
 
-## 🚀 Features
-
-- **Immersive Design:** Dark-themed, high-contrast aesthetic with ambient lighting and glassmorphism effects.
-- **Scrolly-telling Experience:** Smooth scroll animations and transition effects guided by user interaction.
-- **Interactive Projects Grid:** Bento-style grid layout with video previews and detailed modal views for each project.
-- **Dynamic Timeline:** Visual representation of my professional career and educational background.
-- **Testimonial Marquee:** Infinite scrolling marquee for client and colleague testimonials.
-- **Responsive Layout:** Fully optimized for desktops, tablets, and mobile devices.
-- **Contact Integration:** Functional contact form integrated with Nodemailer for direct email communication.
+## ✨ Features
+* **Visuals:** Dark theme, glassmorphism, and ambient lighting.
+* **Motion:** Smooth scrolly-telling and custom transition effects.
+* **Projects:** Bento-style grid featuring video previews and detailed modals.
+* **Timeline:** Interactive career and education history.
+* **Extras:** Infinite testimonial marquee and full mobile responsiveness.
+* **Contact:** Built-in direct messaging via Nodemailer.
 
 ## 🛠️ Tech Stack
+* **Core:** [Next.js 16](https://nextjs.org/) (App Router), TypeScript
+* **Styling:** [Tailwind CSS 4](https://tailwindcss.com/)
+* **Animation & 3D:** [Framer Motion](https://www.framer.com/motion/), [Three.js](https://threejs.org/), [React Three Fiber](https://docs.pmnd.rs/react-three-fiber)
+* **Media:** Custom/Lucide SVGs, [FFmpeg](https://ffmpeg.org/), HTML5 Video
 
-- **Framework:** [Next.js 16](https://nextjs.org/) (App Router)
-- **Language:** TypeScript
-- **Styling:** [Tailwind CSS 4](https://tailwindcss.com/)
-- **Animations:** [Framer Motion](https://www.framer.com/motion/)
-- **3D Elements:** [Three.js](https://threejs.org/) & [React Three Fiber](https://docs.pmnd.rs/react-three-fiber)
-- **Icons:** Custom SVG & Lucide React
-- **Video:** [FFmpeg](https://ffmpeg.org/) (for optimization) & HTML5 Video
+## 📂 Structure
 
-## 📂 Project Structure
-
-```
+```text
 ├── src/
-│   ├── app/             # Application routes (Next.js App Router)
-│   ├── components/      # Reusable UI components (Hero, Projects, Skills, etc.)
-│   ├── hooks/           # Custom React hooks
-│   ├── lib/             # Utility functions and shared logic
-│   └── styles/          # Global styles and Tailwind configuration
-├── public/              # Static assets (images, videos, fonts)
-├── .env.local           # Environment variables (not committed)
-└── package.json         # Project dependencies and scripts
+│   ├── app/         # Next.js routes
+│   ├── components/  # Reusable UI elements
+│   ├── hooks/       # Custom React hooks
+│   ├── lib/         # Shared utilities
+│   └── styles/      # Global styling & Tailwind config
+├── public/          # Static assets
+└── .env.local       # Local secrets
 ```
 
 ## 🏁 Getting Started
@@ -47,8 +40,8 @@ A premium, interactive personal portfolio website built with modern web technolo
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/fawazv/personal_porfolio.git
-   cd personal_porfolio
+   git clone https://github.com/Mainak-Das/My-3D-Portfolio.git
+   cd My-3D-Portfolio
    ```
 
 2. Install dependencies:
@@ -81,8 +74,4 @@ A premium, interactive personal portfolio website built with modern web technolo
 
 ## 🤝 Contributing
 
-Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](https://github.com/fawazv/personal_porfolio/issues).
-
-## 📄 License
-
-This project is open-source and available under the [MIT License](LICENSE).
+Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](https://github.com/Mainak-Das/My-3D-Portfolio/issues).
