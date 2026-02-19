@@ -165,7 +165,7 @@ export default function Contact() {
         </div>
 
         <footer className="mt-24 pt-8 border-t border-white/5 text-center text-gray-500 font-mono text-sm">
-          <p>&copy; {year} Mohammed Fawaz. All rights reserved.</p>
+          <p>&copy; {year} All rights reserved | Made with ❤️ by Mainak Das</p>
         </footer>
       </div>
     </section>
