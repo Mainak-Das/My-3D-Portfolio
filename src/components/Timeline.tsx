@@ -5,9 +5,9 @@ import { useRef } from "react";
 
 const TIMELINE_DATA = [
   {
-    year: "2024 - Present",
+    year: "2026 - Present",
     title: "Full Stack Developer",
-    org: "Freelance & Open Source",
+    org: "Cognizant",
     description: "Architecting enterprise-scale applications like 'Elite Hotel' (Microservices) and 'Nxtcart' (E-commerce). Expertise in Next.js, Docker, Kubernetes, and Cloud Architecture.",
     type: "work",
   },
