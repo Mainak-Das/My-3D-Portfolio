@@ -11,7 +11,7 @@ export default function Overlay({ scrollYProgress }: { scrollYProgress: any }) {
     // const opacity3 = useTransform(scrollYProgress, [0.75, 0.85, 0.9, 1], [0, 1, 1, 0]);
 
     return (
-        <div className="absolute inset-0 pointer-events-none z-10 flex flex-col justify-center text-white">
+        <div className="absolute inset-0 pointer-events-none z-10 flex flex-col justify-center text-white lg:hidden">
             {/* Section 1 */}
             <motion.div
                 style={{ opacity: opacity1 }}

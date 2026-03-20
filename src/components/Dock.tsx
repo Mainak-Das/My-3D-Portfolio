@@ -41,8 +41,8 @@ const Icons = {
 const DOCK_ITEMS = [
   { id: "home", icon: Icons.Home, label: "Home", href: "#home" },
   { id: "projects", icon: Icons.Code, label: "Projects", href: "#projects" },
-  { id: "testimonials", icon: Icons.Star, label: "Testimonials", href: "#testimonials" },
-  { id: "blog", icon: Icons.BookOpen, label: "Blog", href: "#blog" },
+  // { id: "testimonials", icon: Icons.Star, label: "Testimonials", href: "#testimonials" },
+  // { id: "blog", icon: Icons.BookOpen, label: "Blog", href: "#blog" },
   { id: "skills", icon: Icons.Zap, label: "Skills", href: "#skills" },
   { id: "journey", icon: Icons.Compass, label: "Journey", href: "#journey" },
   { id: "contact", icon: Icons.Mail, label: "Contact", href: "#contact" },

@@ -5,31 +5,24 @@ import { useRef } from "react";
 
 const TIMELINE_DATA = [
   {
-    year: "2026 - Present",
-    title: "Full Stack Developer",
+    year: "2025 — Present",
+    title: "Programmer Analyst Trainee",
     org: "Cognizant",
-    description: "Architecting enterprise-scale applications like 'Elite Hotel' (Microservices) and 'Nxtcart' (E-commerce). Expertise in Next.js, Docker, Kubernetes, and Cloud Architecture.",
+    description: "Working as a Programmer Analyst Trainee specializing in Full Stack systems by integrating data-driven insights and algorithmic modules while delivering scalable enterprise solutions.",
     type: "work",
   },
   {
-    year: "2023",
-    title: "The Pivot to Tech",
-    org: "Self-Taught Journey",
-    description: "Graduated with a Bachelor of Commerce but discovered a passion for problem-solving. Dedicated 1000+ hours to mastering the MERN stack and software engineering fundamentals.",
-    type: "milestone",
-  },
-  {
-    year: "2020 - 2023",
-    title: "Bachelor of Commerce",
-    org: "Calicut University",
-    description: "Graduated with a specialization in Co-operation. Developed a strong analytical mindset and understanding of business logic.",
+    year: "2022 — 2025",
+    title: "B.Tech in CSE — AIML",
+    org: "Heritage Institute of Technology",
+    description: "Pursued a Bachelor of Technology in Computer Science & Engineering with a specialization in Artificial Intelligence & Machine Learning.",
     type: "education",
   },
   {
-    year: "2018 - 2020",
-    title: "Computer Applications",
-    org: "GHSS Tirurangadi",
-    description: "Higher Secondary in Commerce with Computer Applications. Early exposure to programming concepts which sparked my initial interest in tech.",
+    year: "2019 — 2022",
+    title: "Diploma in Computer Sc. & Technology",
+    org: "Technique Polytechnic Institute",
+    description: "Completed a Diploma in Computer Science & Technology, getting an early exposure of the fundamentals of programming, data structures, and software engineering.",
     type: "education",
   },
 ];
@@ -57,8 +50,7 @@ export default function Timeline() {
             My <span className="text-transparent bg-clip-text bg-linear-to-r from-[#c74b13] to-orange-500">Journey</span>
           </h2>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto leading-relaxed">
-            From writing my first "Hello World" to building complex applications.
-            Here is a glimpse into my professional evolution.
+            From academics to the industry — here&apos;s a look at my education and career milestones.
           </p>
         </motion.div>
 
@@ -98,9 +90,9 @@ function TimelineItem({ item, index }: { item: any; index: number }) {
       </div>
 
       {/* Content Card */}
-      <div className={`w-full md:w-1/2 pl-12 md:pl-0 ${isEven ? "md:pr-12 md:text-right" : "md:pl-12 md:text-left"}`}>
+      <div className={`w-full md:w-1/2 pl-12 md:pl-0 text-left ${isEven ? "md:pr-12 md:text-right" : "md:pl-12 md:text-left"}`}>
         <div className="group relative p-6 bg-white/5 border border-white/10 rounded-2xl backdrop-blur-sm hover:bg-white/10 transition-colors duration-300">
-          <div className={`flex flex-col ${isEven ? "md:items-end" : "md:items-start"} mb-2`}>
+          <div className={`flex flex-col items-start ${isEven ? "md:items-end" : "md:items-start"} mb-2`}>
             <span className="text-xs text-blue-400 font-mono border border-blue-500/30 px-2 py-1 rounded-full bg-blue-500/10 mb-2 w-fit">
               {item.year}
             </span>
@@ -112,7 +104,7 @@ function TimelineItem({ item, index }: { item: any; index: number }) {
           <p className="text-sm text-[#c74b13] mb-4 font-medium uppercase tracking-wider">
             {item.org}
           </p>
-          <p className="text-gray-400 text-sm leading-relaxed">
+          <p className={`text-gray-400 text-sm leading-relaxed text-left ${isEven ? "md:!text-right" : "md:!text-left"}`}>
             {item.description}
           </p>
         </div>

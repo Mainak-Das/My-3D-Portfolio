@@ -103,8 +103,8 @@ export default function ScrollyVideo({ src, frameCount = 120, children }: Scroll
         canvasRef.current.height = window.innerHeight;
         // Re-render current frame after resize
         const currentProgress = springScroll.get();
-        // Adjust frame index calculation to respect start threshold
-        const startThreshold = 0.25;
+        // On desktop (>=1024px) no overlay, so start video immediately; on mobile/tablet delay start
+        const startThreshold = window.innerWidth >= 1024 ? 0 : 0.25;
 
         let progress = 0;
         if (currentProgress > startThreshold) {
@@ -132,8 +132,8 @@ export default function ScrollyVideo({ src, frameCount = 120, children }: Scroll
   useMotionValueEvent(springScroll, "change", (latest: number) => {
     if (!isLoaded || images.length === 0) return;
 
-    // Delay video start until blur disappears (0.45 scroll progress)
-    const startThreshold = 0.25;
+    // On desktop (>=1024px) no overlay, start immediately; on mobile/tablet delay start
+    const startThreshold = typeof window !== 'undefined' && window.innerWidth >= 1024 ? 0 : 0.25;
     let progress = 0;
     if (latest > startThreshold) {
       progress = (latest - startThreshold) / (1 - startThreshold);
