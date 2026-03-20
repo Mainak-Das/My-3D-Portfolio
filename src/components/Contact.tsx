@@ -74,19 +74,10 @@ export default function Contact() {
               If you have a project that needs some creative touch, I'd love to hear about it.
             </p>
 
-            <div className="flex flex-col gap-6 mb-12">
-              <a href="mailto:fawazv.business@gmail.com" className="flex items-center gap-4 text-gray-300 hover:text-white transition-colors group">
-                <div className="w-12 h-12 rounded-full bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-white/10 transition-colors">
-                  <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="20" height="16" x="2" y="4" rx="2" /><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" /></svg>
-                </div>
-                <span className="text-lg">fawazv.business@gmail.com</span>
-              </a>
-
-              <div className="flex items-center gap-4">
-                <SocialLink href="https://github.com/fawaz-v" icon={<GithubIcon />} label="GitHub" />
-                <SocialLink href="https://linkedin.com/in/" icon={<LinkedinIcon />} label="LinkedIn" />
-                <SocialLink href="https://twitter.com/" icon={<TwitterIcon />} label="Twitter" />
-              </div>
+            <div className="flex items-center gap-4 mb-12">
+              <SocialLink href="mailto:mainakd545@gmail.com" icon={<MailIcon />} label="Mail" tooltip="mainakd545@gmail.com" />
+              <SocialLink href="https://github.com/Mainak-Das" icon={<GithubIcon />} label="GitHub" tooltip="Mainak-Das" />
+              <SocialLink href="https://www.linkedin.com/in/mainakdas2001/" icon={<LinkedinIcon />} label="LinkedIn" tooltip="mainakdas2001" />
             </div>
 
             <a
@@ -172,21 +163,32 @@ export default function Contact() {
   );
 }
 
-function SocialLink({ href, icon, label }: { href: string; icon: React.ReactNode; label: string }) {
+function SocialLink({ href, icon, label, tooltip }: { href: string; icon: React.ReactNode; label: string; tooltip: string }) {
   return (
     <a
       href={href}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="w-12 h-12 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-gray-300 hover:text-white hover:bg-white/10 hover:-translate-y-1 transition-all"
+      target={href.startsWith("mailto:") ? undefined : "_blank"}
+      rel={href.startsWith("mailto:") ? undefined : "noopener noreferrer"}
+      className="relative group w-12 h-12 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-gray-300 hover:text-white hover:bg-white/10 hover:-translate-y-1 transition-all"
       aria-label={label}
     >
       {icon}
+      {/* Tooltip */}
+      <span className="pointer-events-none absolute -top-10 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-lg bg-white/10 backdrop-blur-md border border-white/20 px-3 py-1.5 text-xs text-white opacity-0 scale-90 group-hover:opacity-100 group-hover:scale-100 transition-all duration-200 ease-out">
+        {tooltip}
+        {/* Arrow */}
+        <span className="absolute left-1/2 -translate-x-1/2 -bottom-1 w-2 h-2 rotate-45 bg-white/10 border-r border-b border-white/20" />
+      </span>
     </a>
   );
 }
 
 // Icons
+const MailIcon = () => (
+  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="20" height="16" x="2" y="4" rx="2" /><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" /></svg>
+);
+
+
 const GithubIcon = () => (
   <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
 );
