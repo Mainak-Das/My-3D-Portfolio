@@ -35,7 +35,7 @@ export default function Overlay({ scrollYProgress }: { scrollYProgress: any }) {
                     <div className="text-center lg:text-start md:max-w-4xl flex flex-col items-center lg:items-start">
                         <h1 className="text-2xl md:text-3xl font-semibold tracking-tight mb-2 md:mb-4 text-white/95 drop-shadow-lg">Hi, I'm</h1>
 
-                        <h1 className="text-5xl md:text-7xl lg:text-9xl font-bold tracking-tighter mb-2 bg-gradient-to-r from-[#ff6b2b] via-[#ff9f55] to-[#ff5e1a] bg-clip-text text-transparent pb-4 drop-shadow-2xl relative z-20">Mainak Das.</h1>
+                        <h1 className="text-5xl md:text-7xl lg:text-9xl font-bold tracking-tighter mb-2 bg-gradient-to-r from-[#0369a1] via-[#4c1d95] to-[#1e40af] bg-clip-text text-transparent pb-4 drop-shadow-2xl relative z-20">Mainak Das.</h1>
 
                         <div className="text-md md:text-2xl font-light text-gray-200 drop-shadow-md">
                             <TextGenerateEffect words={["Full Stack Developer", "ML Enthusiast", "Vibe Coder"]} className="inline-block [&_span]:text-gray-400 dark:[&_span]:text-gray-400 font-light tracking-wide" />
@@ -73,7 +73,7 @@ export default function Overlay({ scrollYProgress }: { scrollYProgress: any }) {
                 className="absolute inset-0 flex items-center justify-start p-8 md:p-24"
             >
                 <div className="max-w-2xl">
-                    <h2 className="text-5xl md:text-7xl font-bold leading-tight">Building scalable <br /><span className="text-[#c74b13]">microservices</span> & web apps.</h2>
+                    <h2 className="text-5xl md:text-7xl font-bold leading-tight">Building scalable <br /><span className="text-[#0369a1]">microservices</span> & web apps.</h2>
                 </div>
             </motion.div> */}
 
@@ -83,7 +83,7 @@ export default function Overlay({ scrollYProgress }: { scrollYProgress: any }) {
                 className="absolute inset-0 flex items-center justify-end p-8 md:p-24 text-right"
             >
                 <div className="max-w-2xl">
-                    <h2 className="text-5xl md:text-7xl font-bold leading-tight">Expertise in Next.js, <br /><span className="text-[#c74b13]">Node.js</span> & Cloud.</h2>
+                    <h2 className="text-5xl md:text-7xl font-bold leading-tight">Expertise in Next.js, <br /><span className="text-[#0369a1]">Node.js</span> & Cloud.</h2>
                 </div>
             </motion.div> */}
         </div>

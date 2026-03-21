@@ -14,8 +14,8 @@ const projects = [
         techStack: ["Python", "TensorFlow", "Streamlit", "Jupyter", "Deep Learning", "Computer Vision"],
         repo: "https://github.com/Mainak-Das/IncepRes",
         demo: "https://incepres.streamlit.app/",
-        color: "from-[#1f1e33]/50 to-[#c74b13]/20",
-        hoverColor: "group-hover:from-[#1f1e33]/70 group-hover:to-[#c74b13]/40",
+        color: "from-[#0b132b]/80 to-[#1e40af]/20",
+        hoverColor: "group-hover:from-[#0b132b] group-hover:to-[#1e40af]/40",
         span: "md:col-span-2 md:row-span-1",
         mediaType: "image",
         mediaUrl: "/projects/incepres.png",
@@ -30,8 +30,8 @@ const projects = [
         techStack: ["Python", "Scikit-learn", "NLP", "Streamlit", "TF-IDF", "Web Scraping"],
         repo: "https://github.com/Mainak-Das/hotelytics.ai",
         demo: "https://hotelyticsai.streamlit.app/",
-        color: "from-[#c74b13]/20 to-orange-600/20",
-        hoverColor: "group-hover:from-[#c74b13]/40 group-hover:to-orange-600/40",
+        color: "from-[#1e40af]/20 to-[#0369a1]/20",
+        hoverColor: "group-hover:from-[#1e40af]/40 group-hover:to-[#0369a1]/40",
         span: "md:col-span-1 md:row-span-1",
         mediaType: "image",
         mediaUrl: "/projects/hotelytics.png",
@@ -46,8 +46,8 @@ const projects = [
         techStack: ["React 19", "Node.js", "Express", "MongoDB", "JavaScript"],
         repo: "https://github.com/Mainak-Das/PurePick-FullStack",
         demo: "https://purepick.onrender.com/",
-        color: "from-orange-500/20 to-red-500/20",
-        hoverColor: "group-hover:from-orange-500/40 group-hover:to-red-500/40",
+        color: "from-[#0369a1]/20 to-[#4c1d95]/20",
+        hoverColor: "group-hover:from-[#0369a1]/40 group-hover:to-[#4c1d95]/40",
         span: "md:col-span-1 md:row-span-1",
         mediaType: "image",
         mediaUrl: "/projects/purepick.png",
@@ -77,8 +77,8 @@ export default function Projects() {
         <section className="relative z-20 bg-[#050a14] min-h-screen py-32 px-4 md:px-12 overflow-hidden" id="projects">
             {/* Background Ambience */}
             <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
-                <div className="absolute top-[-20%] right-[-10%] w-[600px] h-[600px] bg-orange-600/10 rounded-full blur-[120px]" />
-                <div className="absolute bottom-[-10%] left-[-10%] w-[500px] h-[500px] bg-blue-600/10 rounded-full blur-[100px]" />
+                <div className="absolute top-[-20%] right-[-10%] w-[600px] h-[600px] bg-[#1e40af]/30 rounded-full blur-[120px]" />
+                <div className="absolute bottom-[-10%] left-[-10%] w-[500px] h-[500px] bg-[#4c1d95]/30 rounded-full blur-[100px]" />
             </div>
 
             <div className="max-w-7xl mx-auto relative">
@@ -89,7 +89,7 @@ export default function Projects() {
                     className="mb-16"
                 >
                     <h2 className="text-5xl md:text-7xl font-bold text-white mb-6 tracking-tight">
-                        Selected <span className="text-transparent bg-clip-text bg-linear-to-r from-blue-400 to-orange-500">Works</span>
+                        Selected <span className="text-transparent bg-clip-text bg-linear-to-r from-[#0369a1] to-[#1e40af]">Works</span>
                     </h2>
                     <p className="text-gray-400 text-lg max-w-2xl leading-relaxed">
                         A curated selection of projects showcasing deep learning, NLP,

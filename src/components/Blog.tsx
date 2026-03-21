@@ -8,7 +8,7 @@ const ARTICLES = [
     excerpt: "How I pivoted from a B.Com degree to Full Stack Development in under a year. The challenges, the late nights, and the breakthroughs.",
     category: "Journey",
     readTime: "5 min read",
-    color: "from-blue-500 to-cyan-500",
+    color: "from-[#0369a1] to-[#1e40af]",
     link: "#", // Placeholder
   },
   {
@@ -16,7 +16,7 @@ const ARTICLES = [
     excerpt: "A deep dive into how I built the Elite Hotel backend using Node.js services, Docker, and RabbitMQ for asynchronous communication.",
     category: "Tech",
     readTime: "8 min read",
-    color: "from-purple-500 to-pink-500",
+    color: "from-[#1e40af] to-[#4c1d95]",
     link: "#",
   },
   {
@@ -24,7 +24,7 @@ const ARTICLES = [
     excerpt: "Comparing Create React App (CRA) vs Next.js. Why Server Side Rendering (SSR) and SEO mattered for my e-commerce project.",
     category: "Tech",
     readTime: "6 min read",
-    color: "from-orange-500 to-red-500",
+    color: "from-[#0b132b] to-[#7f1d1d]",
     link: "#",
   },
 ];
@@ -34,8 +34,8 @@ export default function Blog() {
     <section className="relative z-20 bg-[#0a0a0a] py-32 px-4 md:px-12 overflow-hidden" id="blog">
        {/* Background Ambience */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
-        <div className="absolute top-[-10%] left-[20%] w-[600px] h-[600px] bg-purple-600/10 rounded-full blur-[120px]" />
-        <div className="absolute bottom-[-20%] right-[10%] w-[500px] h-[500px] bg-blue-600/10 rounded-full blur-[100px]" />
+        <div className="absolute top-[-10%] left-[20%] w-[600px] h-[600px] bg-[#7f1d1d]/30 rounded-full blur-[120px]" />
+        <div className="absolute bottom-[-20%] right-[10%] w-[500px] h-[500px] bg-[#4c1d95]/30 rounded-full blur-[100px]" />
       </div>
 
       <div className="max-w-7xl mx-auto relative z-10">

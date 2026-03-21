@@ -42,8 +42,8 @@ export default function Skills() {
     <section className="relative z-20 bg-[#0b131c] min-h-screen py-32 px-4 md:px-12 overflow-hidden" id="skills">
       {/* Background Ambience */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
-        <div className="absolute top-[-20%] right-[-10%] w-[600px] h-[600px] bg-[#c74b13]/10 rounded-full blur-[120px]" />
-        <div className="absolute bottom-[-10%] left-[-10%] w-[500px] h-[500px] bg-[#1f1e33]/40 rounded-full blur-[100px]" />
+        <div className="absolute top-[-20%] right-[-10%] w-[600px] h-[600px] bg-[#4c1d95]/30 rounded-full blur-[120px]" />
+        <div className="absolute bottom-[-10%] left-[-10%] w-[500px] h-[500px] bg-[#7f1d1d]/20 rounded-full blur-[100px]" />
       </div>
 
       <div className="max-w-7xl mx-auto relative">
@@ -54,7 +54,7 @@ export default function Skills() {
           className="mb-16"
         >
           <h2 className="text-5xl md:text-7xl font-bold text-white mb-6 tracking-tight">
-            Technical <span className="text-transparent bg-clip-text bg-linear-to-r from-[#c74b13] to-orange-500">Arsenal</span>
+            Technical <span className="text-transparent bg-clip-text bg-linear-to-r from-[#0369a1] to-[#1e40af]">Arsenal</span>
           </h2>
           <p className="text-gray-400 text-lg max-w-2xl leading-relaxed">
             A comprehensive stack enabling end-to-end development of scalable applications.
@@ -70,7 +70,7 @@ export default function Skills() {
               transition={{ duration: 0.5, delay: idx * 0.1 }}
               className="p-8 rounded-3xl bg-white/5 border border-white/10 backdrop-blur-md hover:bg-white/10 transition-colors"
             >
-              <h3 className="text-2xl font-bold text-[#c74b13] mb-6 uppercase tracking-wider">{group.category}</h3>
+              <h3 className="text-2xl font-bold text-[#0369a1] mb-6 uppercase tracking-wider">{group.category}</h3>
               <div className="flex flex-wrap gap-3">
                 {group.items.map((skill, sIdx) => (
                   <motion.span

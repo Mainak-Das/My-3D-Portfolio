@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
+import { Turnstile } from '@marsidev/react-turnstile';
 
 export default function Contact() {
   const [formState, setFormState] = useState({
@@ -11,10 +12,17 @@ export default function Contact() {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
+  const [turnstileToken, setTurnstileToken] = useState<string | null>(null);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
+
+    if (!turnstileToken) {
+      alert('Please complete the CAPTCHA to verify you are human.');
+      setIsSubmitting(false);
+      return;
+    }
 
     try {
       const response = await fetch('/api/send-email', {
@@ -22,7 +30,7 @@ export default function Contact() {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(formState),
+        body: JSON.stringify({ ...formState, turnstileToken }),
       });
 
       if (!response.ok) {
@@ -50,8 +58,8 @@ export default function Contact() {
     <section className="relative z-20 bg-[#0b131c] py-32 px-4 md:px-12 overflow-hidden" id="contact">
       {/* Background Gradients */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
-        <div className="absolute top-[-10%] right-[-5%] w-[600px] h-[600px] bg-[#c74b13]/10 rounded-full blur-[120px]" />
-        <div className="absolute bottom-[-10%] left-[-5%] w-[500px] h-[500px] bg-[#1f1e33]/40 rounded-full blur-[100px]" />
+        <div className="absolute top-[-10%] right-[-5%] w-[600px] h-[600px] bg-[#4c1d95]/30 rounded-full blur-[120px]" />
+        <div className="absolute bottom-[-10%] left-[-5%] w-[500px] h-[500px] bg-[#7f1d1d]/30 rounded-full blur-[100px]" />
       </div>
 
       <div className="max-w-7xl mx-auto relative z-10">
@@ -65,13 +73,12 @@ export default function Contact() {
           >
             <h2 className="text-5xl md:text-7xl font-bold mb-6 text-white tracking-tight">
               Let's work <br />
-              <span className="text-transparent bg-clip-text bg-linear-to-r from-[#c74b13] to-orange-500">
+              <span className="text-transparent bg-clip-text bg-linear-to-r from-[#0369a1] to-[#1e40af]">
                 together.
               </span>
             </h2>
             <p className="text-gray-400 text-lg mb-10 max-w-md leading-relaxed">
-              I'm currently available for freelance projects and open to full-time opportunities.
-              If you have a project that needs some creative touch, I'd love to hear about it.
+              I'm always happy to connect with fellow professionals and explore innovative ideas. Whether you have a visionary project in mind or simply want to expand our network, I'd love to hear from you.
             </p>
 
             <div className="flex items-center gap-4 mb-12">
@@ -135,10 +142,18 @@ export default function Contact() {
                 />
               </div>
 
+              <div className="flex justify-center my-4 overflow-hidden rounded-xl">
+                <Turnstile
+                  siteKey={process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY || '1x00000000000000000000AA'}
+                  onSuccess={(token) => setTurnstileToken(token)}
+                  options={{ theme: 'dark' }}
+                />
+              </div>
+
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full py-4 bg-linear-to-r from-[#c74b13] to-orange-600 rounded-xl text-white font-bold hover:opacity-90 transition-opacity disabled:opacity-50 flex items-center justify-center gap-2"
+                className="w-full py-4 bg-linear-to-r from-[#0369a1] to-[#1e40af] rounded-xl text-white font-bold hover:opacity-90 transition-opacity disabled:opacity-50 flex items-center justify-center gap-2"
               >
                 {isSubmitting ? (
                   <>
